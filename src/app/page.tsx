@@ -49,9 +49,9 @@ function Home() {
         <FinalReport />
       </main>
       <footer className="my-4 text-center text-sm text-gray-600 print:hidden">
-        <a href="https://github.com/u14app/" target="_blank">
+        <a href="https://blog.88lin.eu.org" target="_blank">
           {t("copyright", {
-            name: "U14App",
+            name: "茉灵智库",
           })}
         </a>
       </footer>
