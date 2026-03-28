@@ -250,7 +250,7 @@ function Header() {
   return (
     <>
       <header className="flex justify-between items-center my-6 max-sm:my-4 print:hidden">
-        <a href="https://blog.88lin.eu.org" target="_blank">
+        <a href="/" target="_blank">
           <h1 className="text-left text-xl font-semibold">
             {t("title")}
             <small className="ml-2 font-normal text-base">v{VERSION}</small>

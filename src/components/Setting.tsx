@@ -400,13 +400,14 @@ function Setting({ open, onClose }: SettingProps) {
 
   return (
     <Dialog open={open} onOpenChange={handleClose}>
-      <DialogContent className="max-w-lg max-lg:max-w-md print:hidden">
+      <DialogContent className="flex max-h-[90dvh] max-w-lg flex-col overflow-hidden max-lg:max-w-md print:hidden">
         <DialogHeader>
           <DialogTitle>{t("setting.title")}</DialogTitle>
           <DialogDescription>{t("setting.description")}</DialogDescription>
         </DialogHeader>
-        <Form {...form}>
-          <form className="space-y-4">
+        <div className="min-h-0 flex-1 overflow-y-auto pr-1">
+          <Form {...form}>
+            <form className="space-y-4">
             <Tabs defaultValue="llm">
               <TabsList className="w-full mb-2">
                 <TabsTrigger className="flex-1" value="llm">
@@ -3990,8 +3991,9 @@ function Setting({ open, onClose }: SettingProps) {
                 />
               </TabsContent>
             </Tabs>
-          </form>
-        </Form>
+            </form>
+          </Form>
+        </div>
         <DialogFooter className="mt-2 flex-row sm:justify-between sm:space-x-0 gap-3">
           <Button className="flex-1" variant="outline" onClick={onClose}>
             {t("setting.cancel")}
